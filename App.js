@@ -30,7 +30,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === 'light';
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -96,6 +96,7 @@ const App: () => Node = () => {
             </Section>
             <Megan sectionTitle="cute is my catch all word for all things" title="Press Me" content="so freaking cute"/>
             <Megan sectionTitle="here we go again" title="That New New" content="ok cute again am i right"/>
+            <Megan sectionTitle="let's get it going whoop woop" title="Kinda Nice" content="this will be a nav link in a sec"/>
           </ImageBackground>
         </View>
       </ScrollView>
