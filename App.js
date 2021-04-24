@@ -67,12 +67,11 @@ const App: () => Node = () => {
   const Megan = (props) => {
     return(
       <View>
-        <Section title="Cute is my catch all word for all things">
-          <Text>this is cute!</Text>
+        <Section title={props.sectionTitle}>
           <Button
-          title="Press me"
+          title={props.title}
           color="#f194ff"
-          onPress={() => Alert.alert('SUPER CUTE!')}
+          onPress={() => Alert.alert(props.content)}
           />
         </Section>
       </View>
@@ -95,8 +94,8 @@ const App: () => Node = () => {
               My name is <Text style={styles.highlight}>Megan Karbowski</Text> and this is my
               test react native app!
             </Section>
-            <Megan />
-
+            <Megan sectionTitle="cute is my catch all word for all things" title="Press Me" content="so freaking cute"/>
+            <Megan sectionTitle="here we go again" title="That New New" content="ok cute again am i right"/>
           </ImageBackground>
         </View>
       </ScrollView>
